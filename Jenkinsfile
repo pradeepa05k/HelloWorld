@@ -1,11 +1,12 @@
 pipeline {
-  agent any {
+    agent any
+
     stages {
-      stage('Two') {
-        steps {
-          echo 'Hello world'
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                git branch: 'main', url: 'https://github.com/pradeepa05k/HelloWorld.git'
+            }
         }
-      }
-    }    
-  }
+    }
 }
